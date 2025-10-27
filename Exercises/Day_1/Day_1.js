@@ -65,4 +65,4 @@ let yourAge = 30;
 console.log(`I am ${myAge} years old.`);
 console.log(`You are ${yourAge} years old`);
 
-console.log(`I am ${myAge} years old\tYou are ${yourAge} years old`);
+console.log(`I am ${myAge} years old\nYou are ${yourAge} years old`);
