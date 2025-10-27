@@ -1,0 +1,73 @@
+let challenge = "30 Days of JavaScript ";
+let company = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon";
+let sentence =
+  "You cannot end a sentence with because because because is a conjunction";
+const searchTerm = "because";
+let match = "30 Days of JavaScript";
+let thirtyDaysOfJavaScript = " 30 Days Of JavaScript ";
+let part1 = "30 Days of";
+let part2 = "JavaScript";
+let hopefulMessage = "I hope this course is not full of jargon";
+
+console.log(challenge);
+
+console.log(challenge.length);
+
+console.log(challenge.toUpperCase());
+
+console.log(challenge.toLowerCase());
+
+console.log(challenge.substring(0, 2));
+
+console.log(challenge.substring(2));
+
+console.log(challenge.includes("Script"));
+
+console.log(challenge.split(" "));
+
+console.log(company.split(" "));
+
+console.log(challenge.replace("JavaScript", "Pyton"));
+
+console.log(challenge.charAt(15));
+
+console.log(challenge.charCodeAt("J"));
+
+console.log(challenge.indexOf("a"));
+
+console.log(challenge.lastIndexOf("a"));
+
+const indexOfFirst = sentence.indexOf(searchTerm);
+
+console.log(
+  `The index of the first occurrence "${searchTerm}" is ${indexOfFirst}`
+);
+
+console.log(
+  `The index of the second occurrence  "${searchTerm}" is ${sentence.indexOf(
+    searchTerm,
+    indexOfFirst + 1
+  )}`
+);
+
+console.log(
+  `The index of the last occurrence "${searchTerm}" is ${sentence.lastIndexOf(
+    searchTerm
+  )}`
+);
+
+console.log(hopefulMessage.search(searchTerm));
+
+console.log(thirtyDaysOfJavaScript.trim());
+
+console.log(challenge.startsWith(match));
+console.log(challenge.endsWith(match));
+
+console.log(challenge.match(/a/g)); // Regex to find all the a's
+
+console.log(part1.concat(" ", part2)); // Adding a space in between
+
+console.log(challenge.repeat(2));
+
+const parargah = "My name is peter cokerI live in DubiinI am 31 years old";
+console.log(parargah);
