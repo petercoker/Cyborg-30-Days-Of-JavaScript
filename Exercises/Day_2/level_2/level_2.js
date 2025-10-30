@@ -68,13 +68,26 @@ console.log(sentence.includes(jargonWord));
 console.log(Math.floor(Math.random() * 101));
 
 // 8. Generate a random number between 50 and 100 inclusively.
-let min = 50;
-let max = 100;
-console.log(Math.floor(Math.random() * max - min) + 50);
+const min = 50;
+const max = 100;
 
-// 9. Generate a random number between 0 and 255 inclusively.
+console.log(Math.floor(Math.random() * max - min) + min);
+
+// 9. Generate a random number between 0  and 255 inclusively.
+console.log(Math.floor(Math.random() * 256));
 
 // 10. Access the 'JavaScript' string characters using a random number.
+let javaScriptName = "JavaScript";
+console.log(javaScriptName.length); // 10
+
+console.log(
+  javaScriptName[Math.floor(Math.random() * javaScriptName.length + 1)]
+); // But valid string indices for "JavaScript" are 0 through 9. Incex 10 is out of range - it will return undefined sometimes
+
+// best practice
+let javaScriptName1 = "JavaScript";
+let randomIndex = Math.floor(Math.random() * javaScriptName1.length);
+console.log(javaScriptName1[randomIndex]);
 
 // 11. Use console.log() and escape characters to print the following pattern.
 /*
@@ -84,5 +97,16 @@ console.log(Math.floor(Math.random() * max - min) + 50);
 4 1 4 16 64
 5 1 5 25 125
 */
+
+console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125");
+
+// cleaner alternative
+console.log(`1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125
+    `);
+
 
 // 12. Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
