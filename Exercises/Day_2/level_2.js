@@ -118,6 +118,8 @@ const target = "because because because";
 // Find the starting index of the phrase
 const start = sentence.indexOf(target);
 
+console.log("breakdown", start + target.length);
+
 const result = sentence.slice(start, start + target.length);
 
 console.log(result);
