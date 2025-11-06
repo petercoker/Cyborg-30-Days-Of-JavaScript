@@ -5,9 +5,15 @@ let sentence =
 
 console.log(sentence.toLowerCase().match(/love/g).length);
 
+// best practice
+// Null safety: If the word doesn’t exist, .match() returns null, and calling .length would throw an error.
+const matches = sentence.toLowerCase().match(/\blove\b/g) || [];
+console.log(matches.length);
+
 let cleaned = sentence.replaceAll(".", "");
-let words = cleaned.toLowerCase().trim().split(" ");
 const love = "love";
+
+let words = cleaned.toLowerCase().trim().split(" ");
 let num = 0;
 for (const element of words) {
   if (love === element) {
@@ -43,11 +49,57 @@ console.log(
 
 //3 Clean the following text and find the most frequent word (hint, use replace and regular expressions).
 
+//TODO : Comeback
 sentence =
   "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
 
+// the goal is to have it 'I am a teacher, and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher!? This 30 Days Of JavaScript is also the result of love of teaching'
 cleaned = sentence.replaceAll(/[^\w\s]/g, "");
 console.log(cleaned);
+
+// coorection
+
+cleaned = sentence
+  .replaceAll(/[^a-zA-Z0-9\s.,!?]/g, "") // keep letters, digits, spaces, ., , !, ?
+  .replaceAll(/(\d)([A-Za-z])/g, "$1 $2") // add space between number and word
+  .replaceAll(/\s+/g, " ") // normalize spaces
+  .trim();
+
+console.log(cleaned);
+
+cleaned = sentence
+  .replaceAll(/[^a-zA-Z0-9\s.,!?]/g, "") // keep letters, digits, spaces, ., , !, ?
+  .replaceAll(/(\d)([A-Za-z])/g, "$1 $2") // add space between number and word
+  .replaceAll(/\s+/g, " ") // normalize spaces
+  .trim();
+
+console.log(cleaned);
+
+// 1. Clean the text
+cleaned = sentence.replace(/[^a-zA-Z\s]/g, "").toLowerCase();
+
+// 2. Split into words
+words = cleaned.split(/\s+/);
+
+// 3. Count frequencies
+let freq = {};
+for (let word of words) {
+  freq[word] = (freq[word] || 0) + 1;
+}
+
+// 4. Find the most frequent word
+let mostFrequent = Object.keys(freq).reduce((a, b) =>
+  freq[a] > freq[b] ? a : b
+);
+
+console.log("Cleaned text:", cleaned);
+console.log(
+  "Most frequent word:",
+  mostFrequent,
+  "-",
+  freq[mostFrequent],
+  "times"
+);
 
 // 4 Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
 
