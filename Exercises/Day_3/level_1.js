@@ -101,3 +101,15 @@ console.log(!(dragon.includes(on) && python.includes(on))); // correct “There 
 //    5. What is the hours now?
 //    6. What is the minutes now?
 //    7. Find out the number of seconds elapsed from January 1, 1970 to now.
+
+const today = new Date();
+console.log(today.getFullYear());
+console.log(today.getMonth());
+console.log(today.getDate());
+console.log(today.getDay());
+console.log(today.getHours());
+console.log(today.getMinutes());
+
+const nowInMs = Date.now(); // millisecond since Jan 1, 1970
+const nowInSeconds = Math.floor(nowInMs / 1000); //Divide by 1000 to convert to seconds
+console.log(nowInSeconds);
