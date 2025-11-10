@@ -61,45 +61,15 @@ console.log(cleaned);
 
 cleaned = sentence
   .replaceAll(/[^a-zA-Z0-9\s.,!?]/g, "") // keep letters, digits, spaces, ., , !, ?
-  .replaceAll(/(\d)([A-Za-z])/g, "$1 $2") // add space between number and word
+  .replaceAll(/(\d+)([A-Za-z])/g, "$1 $2") // add space between number and word
+  .replaceAll(/([a-z])([A-Z])/g, "$1 $2") // space between lowercase → uppercase
+  .replaceAll("Java Script", "JavaScript") // protect JavaScript
   .replaceAll(/\s+/g, " ") // normalize spaces
   .trim();
 
 console.log(cleaned);
 
-cleaned = sentence
-  .replaceAll(/[^a-zA-Z0-9\s.,!?]/g, "") // keep letters, digits, spaces, ., , !, ?
-  .replaceAll(/(\d)([A-Za-z])/g, "$1 $2") // add space between number and word
-  .replaceAll(/\s+/g, " ") // normalize spaces
-  .trim();
 
-console.log(cleaned);
-
-// 1. Clean the text
-cleaned = sentence.replace(/[^a-zA-Z\s]/g, "").toLowerCase();
-
-// 2. Split into words
-words = cleaned.split(/\s+/);
-
-// 3. Count frequencies
-let freq = {};
-for (let word of words) {
-  freq[word] = (freq[word] || 0) + 1;
-}
-
-// 4. Find the most frequent word
-let mostFrequent = Object.keys(freq).reduce((a, b) =>
-  freq[a] > freq[b] ? a : b
-);
-
-console.log("Cleaned text:", cleaned);
-console.log(
-  "Most frequent word:",
-  mostFrequent,
-  "-",
-  freq[mostFrequent],
-  "times"
-);
 
 // 4 Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
 
