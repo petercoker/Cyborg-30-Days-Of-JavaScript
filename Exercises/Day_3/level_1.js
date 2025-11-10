@@ -113,3 +113,6 @@ console.log(today.getMinutes());
 const nowInMs = Date.now(); // millisecond since Jan 1, 1970
 const nowInSeconds = Math.floor(nowInMs / 1000); //Divide by 1000 to convert to seconds
 console.log(nowInSeconds);
+
+// best practice
+console.log(Math.floor(Date.now() / 1000));
