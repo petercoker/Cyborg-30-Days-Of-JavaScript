@@ -4,9 +4,9 @@
 // Enter height: 10
 // The area of the triangle is 100
 
-let base = Number(prompt("Enter base: "));
-let height = Number(prompt("Enter height: "));
-let area = 0.5 * base * height;
+const base = Number(prompt("Enter base: "));
+const height = Number(prompt("Enter height: "));
+const area = 0.5 * base * height;
 alert(`The area of the triangle is ${area}`);
 
 // 2.  Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
