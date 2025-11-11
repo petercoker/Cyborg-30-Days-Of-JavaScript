@@ -11,7 +11,7 @@ alert(`The area of the triangle is ${area}`);
 
 // best practice
 if (Number.isNaN(base) || Number.isNaN(height)) {
-  alert(`Please enter valid numbers for base and height.`);
+  alert("Please enter valid numbers for base and height.");
 } else {
   area = 0.5 * base * height;
   alert(`The area of the triangle is ${area}`);
@@ -23,6 +23,34 @@ if (Number.isNaN(base) || Number.isNaN(height)) {
 // Enter side b: 4
 // Enter side c: 3
 // The perimeter of the triangle is 12
+
+let a = Number(prompt("Enter side a:", "Number"));
+let b = Number(prompt("Enter side b:", "Number"));
+let c = Number(prompt("Enter side c:", "Number"));
+
+if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)) {
+  alert("Please enter a valid number");
+} else {
+  const perimeter = a + b + c;
+  alert(`The perimeter of the triangle is ${perimeter}`);
+}
+
+// best practice
+a = Number(prompt("Enter side a:", ""));
+b = Number(prompt("Enter side b:", ""));
+c = Number(prompt("Enter side c:", ""));
+
+function getPerimeter(a, b, c) {
+  if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)) {
+    return "Please enter valid numbers";
+  }
+  if (a <= 0 || b <= 0 || c <= 0) {
+    return "The sides do not form a valid triangle";
+  }
+  return `The perimeter of the triangle is ${a + b + c}`;
+}
+
+alert(getPerimeter(a, b, c));
 
 // 3. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
 
