@@ -4,6 +4,11 @@
 // Enter height: 10
 // The area of the triangle is 100
 
+let base = Number(prompt("Enter base: "));
+let height = Number(prompt("Enter height: "));
+let area = 0.5 * base * height;
+alert(`The area of the triangle is ${area}`);
+
 // 2.  Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
 
 // Enter side a: 5
@@ -33,15 +38,15 @@
 
 // 11. Compare your first name length and your family name length and you should get this output.
 
-let firstName = 'Asabeneh'
-let lastName = 'Yetayeh'
+let firstName = "Asabeneh";
+let lastName = "Yetayeh";
 
 // Your first name, Asabeneh is longer than your family name, Yetayeh
 
 // 12. Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
 
-let myAge = 250
-let yourAge = 25
+let myAge = 250;
+let yourAge = 25;
 // I am 225 years older than you.
 
 // 13. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
