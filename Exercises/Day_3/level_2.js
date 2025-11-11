@@ -6,8 +6,16 @@
 
 const base = Number(prompt("Enter base: "));
 const height = Number(prompt("Enter height: "));
-const area = 0.5 * base * height;
+let area = 0.5 * base * height;
 alert(`The area of the triangle is ${area}`);
+
+// best practice
+if (Number.isNaN(base) || Number.isNaN(height)) {
+  alert(`Please enter valid numbers for base and height.`);
+} else {
+  area = 0.5 * base * height;
+  alert(`The area of the triangle is ${area}`);
+}
 
 // 2.  Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
 
