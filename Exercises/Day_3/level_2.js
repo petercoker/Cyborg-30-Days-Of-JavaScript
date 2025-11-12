@@ -59,13 +59,22 @@ const width = Number(prompt("Enter width:"));
 if (Number.isNaN(length) || Number.isNaN(width)) {
   alert("Please enter a valid number for the length and width.");
 } else {
-  const area = length * width;
+  let area = length * width;
   const perimeter = 2 * (length + width);
   alert(`The area of the rectangle is ${area}`);
   alert(`The perimeter of the rectangle is ${perimeter}`);
 }
 
 // 4. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+const radius = Number(prompt("Enter radius:"));
+if (Number.isNaN(radius)) {
+  alert("Please enter a valid number for radius");
+} else {
+  const areaOfCircle = Math.PI * radius * radius;
+  const circumferenceOfCircle = 2 * Math.PI * radius;
+  alert(`The area of a cicle ${areaOfCircle.toFixed(2)}`);
+  alert(`The circumference of a cicle ${circumferenceOfCircle.toFixed(2)}`);
+}
 
 // 5. Calculate the slope, x-intercept and y-intercept of y = 2x -2
 
