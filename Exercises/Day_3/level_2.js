@@ -53,6 +53,17 @@ function getPerimeter(a, b, c) {
 alert(getPerimeter(a, b, c));
 
 // 3. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+const length = Number(prompt("Enter length:"));
+const width = Number(prompt("Enter width:"));
+
+if (Number.isNaN(length) || Number.isNaN(width)) {
+  alert("Please enter a valid number for the length and width.");
+} else {
+  const area = length * width;
+  const perimeter = 2 * (length + width);
+  alert(`The area of the rectangle is ${area}`);
+  alert(`The perimeter of the rectangle is ${perimeter}`);
+}
 
 // 4. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
 
