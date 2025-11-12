@@ -77,12 +77,48 @@ if (Number.isNaN(radius)) {
 }
 
 // 5. Calculate the slope, x-intercept and y-intercept of y = 2x -2
+let x = Number(prompt("Enter a number for x:"));
+let y = Number(prompt("Enter a number for y:"));
+let slope = 2;
+if (Number.isNaN(x) || Number.isNaN(y)) {
+  alert("Please enter a valid number");
+} else {
+  y = 2 * x - 2;
+  alert(y);
+}
+
+// best practice
+const slopeEquation = 2;
+const yIntercept = -2;
+const xIntercept = 1;
+
+console.log(`Slope: ${slopeEquation}`);
+console.log(`Y-intercept: ${yIntercept}`);
+console.log(`X-intercept: ${xIntercept}`);
 
 // 6. Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
+x = Number(prompt("Enter a number for x:"));
+y = Number(prompt("Enter a number for y:"));
+
+console.log((y * 2 - y - 1) / (x * 2 - x * 1));
+
+// best practice.
+const x1 = 2;
+const y1 = 2;
+const x2 = 6;
+const y2 = 10;
+
+const slopePoints = (y2 - y1) / (x2 - x1);
+
+console.log(`The slope between (${x1}, ${y1}) and (${x2} is ${slopePoints})`);
 
 // 7. Compare the slope of above two questions.
+console.log(
+  slopeEquation === slope ? "Both slopes are equal" : "The slopes are different"
+);
 
 // 8. Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+
 
 // 9. Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
 
