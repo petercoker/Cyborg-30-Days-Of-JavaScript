@@ -119,9 +119,30 @@ console.log(
 
 // 8. Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
 
+// Equation: y = x^2 + 6x + 9
+function calculate(x) {
+  return x * x + 6 * x + 9;
+}
+
+// Try different x values
+console.log(calculate(0));
+console.log(calculate(1));
+console.log(calculate(-3)); // 0 <--- root
+console.log(calculate(2));
+
+// Solve for when y = 0
+const root = -3;
+console.log(`y is 0 when x = ${root}`);
 
 // 9. Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
-
+const hours = Number(prompt("Please enter the hours:"));
+const ratePerHour = Number(prompt("Please enter rate per hour:"));
+if (Number.isNaN(hours) || Number.isNaN(ratePerHour)) {
+  alert("Please enter the right number");
+} else {
+  const weeklyEarning = hours * ratePerHour;
+  alert(`Your weekly earning is ${weeklyEarning.toFixed(2)}`);
+}
 // Enter hours: 40
 // Enter rate per hour: 28
 // Your weekly earning is 1120
