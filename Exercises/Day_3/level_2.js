@@ -76,6 +76,7 @@ if (Number.isNaN(radius)) {
   alert(`The circumference of a cicle ${circumferenceOfCircle.toFixed(2)}`);
 }
 
+//TODO : comeback to 5 to 8
 // 5. Calculate the slope, x-intercept and y-intercept of y = 2x -2
 let x = Number(prompt("Enter a number for x:"));
 let y = Number(prompt("Enter a number for y:"));
@@ -148,6 +149,17 @@ if (Number.isNaN(hours) || Number.isNaN(ratePerHour)) {
 // Your weekly earning is 1120
 
 // 10. If the length of your name is greater than 7 say, your name is long else say your name is short.
+let yourName = prompt("Enter your name:");
+
+alert(yourName.length > 7 ? "Your name is long" : "Your name is short");
+
+// best pratice
+yourName = prompt("Enter your name:");
+if (yourName) {
+  alert(`${yourName}, your name is ${yourAge > 7 ? "long" : "short"}`);
+} else {
+  alert("Your didn't enter a name");
+}
 
 // 11. Compare your first name length and your family name length and you should get this output.
 
@@ -155,14 +167,81 @@ let firstName = "Asabeneh";
 let lastName = "Yetayeh";
 
 // Your first name, Asabeneh is longer than your family name, Yetayeh
+firstName = prompt("Enter your first name:");
+lastName = prompt("Enter your last Name:");
+
+if (firstName && lastName) {
+  alert(
+    `Your first name ${firstName} is ${
+      firstName.length > lastName.length ? "longer" : "shorter"
+    } than your family name, ${lastName}`
+  );
+} else {
+  alert("You didn't enter a name");
+}
+
+firstName = prompt("Enter your first name:");
+lastName = prompt("Enter your last Name:");
+function compareFirstNameAndLastName(firstName, lastName) {
+  if (firstName.length > lastName.length) {
+    return `Your first name, ${firstName}, is longer than your family name, ${lastName}.`;
+  }
+  if (firstName.length === lastName.length) {
+    return `Your first name, ${firstName}, is equal in length to your family name, ${lastName}.`;
+  }
+  if (firstName.length < lastName.length) {
+    return `Your first name, ${firstName}, is shorter than your family name, ${lastName}.`;
+  }
+}
+
+if (firstName && lastName) {
+  alert(compareFirstNameAndLastName(firstName, lastName));
+} else {
+  alert("You didn't enter a name");
+}
 
 // 12. Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
 
 let myAge = 250;
 let yourAge = 25;
+
+console.log(`I am ${myAge - yourAge} years older than you.`);
 // I am 225 years older than you.
 
 // 13. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+const now = new Date();
+const legalDrivingAge = 18;
+let birthYear = Number(prompt("Enter birth year:"));
+if (Number.isNaN(birthYear) || birthYear >= 1800) {
+  alert("Enter a valid date of birth year");
+} else {
+  const age = now.getFullYear() - birthYear;
+  alert(
+    `Your are ${age}. ${
+      age >= legalDrivingAge
+        ? "You are old enough to drive"
+        : `You will be allowed to drive after ${legalDrivingAge - age} years.`
+    }`
+  );
+}
+
+// best practice
+if (
+  Number.isNaN(birthYear) ||
+  birthYear < 1800 ||
+  birthYear > now.getFullYear()
+) {
+  alert("Enter a valid birth year.");
+} else {
+  const age = now.getFullYear() - birthYear;
+  alert(
+    `You are ${age}. ${
+      age >= legalDrivingAge
+        ? "You are old enough to drive."
+        : `You will be allowed to drive after ${legalDrivingAge - age} years.`
+    }`
+  );
+}
 
 // Enter birth year: 1995
 // You are 25. You are old enough to drive
@@ -172,6 +251,14 @@ let yourAge = 25;
 
 // 14. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
 
+const years = Number(prompt("Enter birth year:"));
+const secondsInAYear = 365 * 24 * 60 * 60;
+
+if (Number.isNaN(years) || years <= 0) {
+  alert("Please enter a valid number of years.");
+} else {
+  alert(`You will lived ${years * secondsInAYear} seconds.`);
+}
 // Enter number of years you live: 100
 // You lived 3153600000 seconds.
 
