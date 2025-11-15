@@ -136,7 +136,7 @@ const root = -3;
 console.log(`y is 0 when x = ${root}`);
 
 // 9. Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
-const hours = Number(prompt("Please enter the hours:"));
+let hours = Number(prompt("Please enter the hours:"));
 const ratePerHour = Number(prompt("Please enter rate per hour:"));
 if (Number.isNaN(hours) || Number.isNaN(ratePerHour)) {
   alert("Please enter the right number");
@@ -271,6 +271,7 @@ if (Number.isNaN(years) || years <= 0) {
 const today = new Date();
 console.log(today);
 const pad = (num) => String(num).padStart(2, "0");
+// ensures the string is at least 2 characters long, padding with "0" at the start if necessary.
 const year = today.getFullYear();
 const month = pad(today.getMonth() + 1);
 const day = pad(today.getDate());
