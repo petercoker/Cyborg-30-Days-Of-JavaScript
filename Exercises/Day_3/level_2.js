@@ -267,3 +267,28 @@ if (Number.isNaN(years) || years <= 0) {
 // YYYY-MM-DD HH:mm
 // DD-MM-YYYY HH:mm
 // DD/MM/YYYY HH:mm
+
+const today = new Date();
+console.log(today);
+const pad = (num) => String(num).padStart(2, "0");
+const year = today.getFullYear();
+const month = pad(today.getMonth() + 1);
+const day = pad(today.getDate());
+hours = pad(today.getHours());
+const minutes = pad(today.getMinutes());
+
+console.log(`${year}-${month}-${day} ${hours}:${minutes}`);
+console.log(`${day}-${month}-${year} ${hours}:${minutes}`);
+console.log(`${day}/${month}/${year} ${hours}:${minutes}`);
+
+const options = {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+};
+
+console.log(new Intl.DateTimeFormat("en-CA", options).format(today));
+console.log(new Intl.DateTimeFormat("en-GB", options).format(today));
+console.log(new Intl.DateTimeFormat("de-DE", options).format(today));
