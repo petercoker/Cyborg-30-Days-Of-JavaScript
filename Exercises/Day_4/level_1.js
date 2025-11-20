@@ -98,3 +98,4 @@ if (Number.isNaN(number)) {
 } else {
   alert(`${number} is an odd number`);
 }
+
