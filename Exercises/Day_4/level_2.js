@@ -174,7 +174,8 @@ if (Autumn.includes(season)) {
 const workingDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 const weekendDays = ["Saturday", "Sunday"];
 input = prompt("Enter the day:");
-const day = input3 ? input[0].toUpperCase() + input.slice(1).toLowerCase() : ""; // guard against cancel/null
+
+const day = input ? input[0].toUpperCase() + input.slice(1).toLowerCase() : ""; // guard against cancel/null
 
 console.log(`What is the day today? ${day}`);
 if (workingDays.includes(day)) {
@@ -193,13 +194,14 @@ if (input) {
   //3. Create a 'Display' version
   const displayDay =
     normalizeDay.charAt(0).toUpperCase() + normalizeDay.slice(1);
+  //M + onday
 
   console.log(`What is the day today? ${displayDay}`);
 
   // 4. Logic check
-  if (workingDays.includes(normalizeDay)) {
+  if (workingDays.includes(displayDay)) {
     console.log(`${displayDay} is a working day.`);
-  } else if (weekendDays.includes(normalizeDay)) {
+  } else if (weekendDays.includes(displayDay)) {
     console.log(`${displayDay} is a weekend.`);
   } else {
     console.log("Enter a valid day");
@@ -207,7 +209,6 @@ if (input) {
 } else {
   console.log("Input cancelled or empty.");
 }
-
 
 // other ways
 const dayType = {
@@ -217,7 +218,7 @@ const dayType = {
   thursday: "a working day",
   friday: "a working day",
   saturday: "a weekend",
-  sunday: "a weekend"
+  sunday: "a weekend",
 };
 
 input = prompt("Enter the day:");
@@ -228,7 +229,7 @@ if (input) {
 
   // Capitalize for display
   const displayDay = key.charAt(0).toUpperCase() + key.slice(1);
-  
+
   console.log(`What is the day today? ${displayDay}`);
 
   if (result) {
@@ -237,4 +238,3 @@ if (input) {
     console.log("Enter a valid day.");
   }
 }
-
