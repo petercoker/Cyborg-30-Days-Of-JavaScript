@@ -1,0 +1,170 @@
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+// 1. Declare an _empty_ array;
+
+const arr = [];
+
+// 2. Declare an array with more than 5 number of elements
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// 3. Find the length of your array
+console.log(numbers.length);
+
+// 4. Get the first item, the middle item and the last item of the array
+console.log(numbers.at(0));
+console.log(numbers[Math.floor(numbers.length / 2)]);
+console.log(numbers.at(-1)); // last index
+
+// best pratice
+
+let mid = Math.floor(numbers.length / 2);
+
+if (numbers.length % 2 === 0) {
+  console.log(numbers[mid - 1], numbers[mid]);
+} else {
+  console.log(numbers[mid]);
+}
+// For an even-length array (say length = 6), mid = 3.
+
+// That points to numbers[3], which is the upper middle element (4 in [1,2,3,4,5,6]).
+
+// But arrays with an even number of elements technically have two middle values:
+
+// numbers[mid - 1] → the lower middle (3)
+
+// numbers[mid] → the upper middle (4)
+
+// So if you want to capture both middles, you need mid - 1 and mid.
+// 5. Declare an array called _mixedDataTypes_, put different data types in the array and find the length of the array. The array size should  be greater than 5
+const _mixedDataTypes_ = [1, "one", [], true, null, undefined, Symbol];
+
+// 6. Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
+
+const itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+
+// 7. Print the array using console.log()
+console.log(itCompanies);
+
+// 8. Print the number of companies in the array
+console.log(itCompanies.length);
+
+// 9. Print the first company, middle and last company
+console.log(itCompanies.at(0)); // Firt
+
+mid = Math.floor(itCompanies.length / 2);
+
+if (itCompanies.length % 2 === 0) {
+  console.log(itCompanies.at(mid - 1), itCompanies.at(mid));
+} else {
+  console.log(itCompanies.at(mid));
+}
+
+console.log(itCompanies.at(-1)); // last
+// 10. Print out each company
+for (const company of itCompanies) {
+  console.log(company);
+}
+// 11. Change each company name  to uppercase one by one and print them out
+for (const company of itCompanies) {
+  console.log(company.toUpperCase());
+}
+
+// 12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+
+let lastCompany = itCompanies.pop();
+let companies = itCompanies.join(", ");
+console.log(`${companies} and ${lastCompany} are big IT companies.`);
+
+// best practice
+companies = itCompanies.slice(0, -1).join(", ");
+lastCompany = itCompanies.at(-1);
+console.log(`${companies} and ${lastCompany} are big IT companies.`);
+
+// 13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is _not found_
+
+// let input = prompt("Enter the company name: ");
+// if (!input) {
+//   alert("Invalid input");
+// } else {
+//   const cleanInput = input.trim().toLowerCase();
+
+//   let company = cleanInput.charAt(0).toUpperCase() + cleanInput.slice(1);
+//   alert(
+//     itCompanies.includes(company)
+//       ? itCompanies.at(itCompanies.indexOf(company))
+//       : alert("not found")
+//   );
+// }
+
+//best practice
+// let input = prompt("Enter the company name: ");
+
+// if (!input || !input.trim()) {
+//   alert("Invalid input");
+// } else {
+//   const searchInput = input.trim().toLowerCase();
+
+//   // Look through the array. Convert each company to lowercase just for the comparison.
+//   const foundCompany = itCompanies.find(company => company.toLowerCase() === searchInput);
+
+//   if (foundCompany) {
+//     alert(foundCompany); // Returns the original casing from the array (e.g., "IBM")
+//   } else {
+//     alert("Not found");
+//   }
+// }
+
+let input = prompt("Enter the company name: ");
+if (!input || !input.trim()) {
+  alert("Invalid input");
+} else {
+  const searchInput = input.trim().toLowerCase();
+
+  // Look through the array. convert each company to lowercase just for the comparison
+  const foundCompany = itCompanies.find(
+    (company) => company.toLowerCase() === searchInput
+  );
+  alert(foundCompany ? foundCompany : "Not found");
+}
+
+// 14. Filter out companies which have more than one 'o' without the filter method
+// 15. Sort the array using _sort()_ method
+// 16. Reverse the array using _reverse()_ method
+// 17. Slice out the first 3 companies from the array
+// 18. Slice out the last 3 companies from the array
+// 19. Slice out the middle IT company or companies from the array
+// 20. Remove the first IT company from the array
+// 21. Remove the middle IT company or companies from the array
+// 22. Remove the last IT company from the array
+// 23. Remove all IT companies
