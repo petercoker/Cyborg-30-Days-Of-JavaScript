@@ -159,8 +159,96 @@ if (!input || !input.trim()) {
 }
 
 // 14. Filter out companies which have more than one 'o' without the filter method
+
+// Try
+const regex = /^.{2,}$/;
+const result = itCompanies.filter((company) => !company.match(regex));
+console.log(result);
+
+const result1 = [];
+// Regex explanation: /o.*o/i
+// o   : find an 'o'
+// .* : followed by any number of characters
+// o   : followed by another 'o'
+// i   : case-insensitive (matches 'O' and 'o')
+const two0sRegex = /o.*o/i;
+
+// /o.*o/i  Zero or more of any character, better because its Flexible
+// /o.{2}o/i
+for (const company of itCompanies) {
+  // If it does NOT match the regex (meaning it has 0 or 1 'o'), keep it.
+  if (!twoOsRegex.test(company)) {
+    result.push(company);
+  }
+}
+
+console.log(result);
+
+// What if you could use .filter()?
+// Just for your reference, if this weren't a specific exercise forbidding the filter method, the "Best Practice" in modern JavaScript would look like this:
+
+// // Keep companies where we CANNOT find two 'o's
+// const result = itCompanies.filter(company => !/o.*o/i.test(company));
+
+// Alternative: The "Mathematical" Approach
+// If you are not comfortable with Regex, you can split the string by the letter 'o'.
+// If the array length is greater than 2, it means there were more than 2 parts (meaning 2 or more 'o's).
+
+// const result = [];
+
+// for (const company of itCompanies) {
+//   // Split the word by 'o' (case-insensitive)
+//   // "Google" splits into ["G", "gle"] -> length 3 (because of 2 'o's)
+//   // "Amazon" splits into ["Amaz", "n"] -> length 2
+//   const parts = company.toLowerCase().split('o');
+
+//   // If parts.length - 1 is the count of 'o's. We want <= 1.
+//   if (parts.length - 1 <= 1) {
+//     result.push(company);
+//   }
+// }
+
+// console.log(result);
+
 // 15. Sort the array using _sort()_ method
+
+// try
+const companies15 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+
+const sortedCompanies = companies15.toSorted((a, b) => b - a);
+// console.log(sortedCompanies);
+
+//best practice
+
+// If you need sorting that handles international characters (like accents or umlauts) correctly, use localeCompare().
+// JavaScript
+
+// Best practice for robust, internationalized alphabetical sort
+const sortedCompanies1 = companies15.toSorted((a, b) => a.localeCompare(b));
+console.log(sortedCompanies);
+
 // 16. Reverse the array using _reverse()_ method
+const companies16 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+const companiesReversed = companies16.toReversed();
+
+console.log(companiesReversed);
+
 // 17. Slice out the first 3 companies from the array
 // 18. Slice out the last 3 companies from the array
 // 19. Slice out the middle IT company or companies from the array
