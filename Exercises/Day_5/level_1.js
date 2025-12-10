@@ -250,7 +250,35 @@ const companiesReversed = companies16.toReversed();
 console.log(companiesReversed);
 
 // 17. Slice out the first 3 companies from the array
+
+const companies17 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+const firstThreeCompanies = companies17.slice(0, 3);
+
+console.log(firstThreeCompanies);
+
 // 18. Slice out the last 3 companies from the array
+const companies18 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+
+const lastThreeCompanies = companies18.slice(-3);
+
+console.log(lastThreeCompanies);
+
 // 19. Slice out the middle IT company or companies from the array
 // 20. Remove the first IT company from the array
 // 21. Remove the middle IT company or companies from the array
