@@ -280,7 +280,122 @@ const lastThreeCompanies = companies18.slice(-3);
 console.log(lastThreeCompanies);
 
 // 19. Slice out the middle IT company or companies from the array
+
+const companies19 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+
+const mid19 = Math.floor(companies19.length / 2);
+
+if (companies19.length % 2 == 0) {
+  console.log(companies19.slice(mid19 - 1), companies19.slice(mid19));
+} else {
+  console.log(companies19.slice(mid19));
+}
+
 // 20. Remove the first IT company from the array
+
+const companies20 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+
+console.log("before - ", companies20);
+const removeFirstITCompany = companies20.shift(); // remove first IT company
+console.log("item - ", removeFirstITCompany);
+console.log("after - ", companies20);
+
 // 21. Remove the middle IT company or companies from the array
+const companies21 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+
+const mid21 = Math.floor(companies21.length / 2);
+
+if (companies21.length % 2 == 0) {
+  console.log(companies21.slice(mid21 - 1), companies21.slice(mid21));
+} else {
+  console.log(companies21.slice(mid21));
+}
+
+
+// best practice
+
+const companies21_B = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+const len_B = companies21_B.length;
+const mid_B = Math.floor(len_B / 2);
+
+let endSliceIndex;
+
+if (len_B % 2 === 0) {
+  // Remove 2 elements: Skip from mid - 1 to mid + 1 (i.e., skip 2 indices)
+  endSliceIndex = mid_B + 1;
+} else {
+  // Remove 1 element: Skip from mid to mid + 1 (i.e., skip 1 index)
+  endSliceIndex = mid_B + 1;
+}
+
+// Combine the part *before* the middle elements with the part *after*
+const finalCompanies = [
+  ...companies21_B.slice(0, mid_B - (len_B % 2 === 0 ? 1 : 0)), // Elements before the removal point
+  ...companies21_B.slice(endSliceIndex)                      // Elements after the removal point
+];
+
+console.log("Original array (unchanged):", companies21_B);
+// Output: [ 'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon' ]
+
+console.log("New array after removal:", finalCompanies);
+// Output: [ 'Facebook', 'Google', 'Microsoft', 'IBM', 'Oracle', 'Amazon' ]
 // 22. Remove the last IT company from the array
+const companies22 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+
+console.log(companies22.pop());
+console.log(companies22);
+
 // 23. Remove all IT companies
+const companies23 = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+
+companies23.splice(0, companies23.length);
+
+console.log(companies23);
