@@ -385,6 +385,18 @@ const companies22 = [
 console.log(companies22.pop());
 console.log(companies22);
 
+// Best Price 
+
+const companies22a = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+// BEST PRACTICE: Creates a new array without the last element
+// -1 means "start at the end", 1 means "remove one item"
+const companiesMinusLast = companies22a.toSpliced(-1, 1);
+
+
+console.log(companiesMinusLast); 
+// Output: ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle"]
+
 // 23. Remove all IT companies
 const companies23 = [
   "Facebook",
@@ -399,3 +411,10 @@ const companies23 = [
 companies23.splice(0, companies23.length);
 
 console.log(companies23);
+
+// best pratice 
+// If you defined the array with let, simply reassign it to an empty array. 
+// This is the most readable approach.
+let companies23a = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+companies23a = [];
+console.log(companies23a)

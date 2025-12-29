@@ -7,46 +7,47 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> January, 2020</small>
-  </sub>
+  `<sub>`Author:
+  `<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">`Asabeneh Yetayeh`</a><br>`
+  `<small>` January, 2020`</small>`
+  `</sub>`
+
 </div>
 
-[<< Day 4](../04_Day_Conditionals/04_day_conditionals.md) | [Day 6 >>](../06_Day_Loops/06_day_loops.md)
+[&lt;&lt; Day 4](../04_Day_Conditionals/04_day_conditionals.md) | [Day 6 &gt;&gt;](../06_Day_Loops/06_day_loops.md)
 
 ![Day 5](../images/banners/day_1_5.png)
 
 - [📔 Day 5](#-day-5)
-	- [Arrays](#arrays)
-		- [How to create an empty array](#how-to-create-an-empty-array)
-		- [How to create an array with values](#how-to-create-an-array-with-values)
-		- [Creating an array using split](#creating-an-array-using-split)
-		- [Accessing array items using index](#accessing-array-items-using-index)
-		- [Modifying array element](#modifying-array-element)
-		- [Methods to manipulate array](#methods-to-manipulate-array)
-			- [Array Constructor](#array-constructor)
-			- [Creating static values with fill](#creating-static-values-with-fill)
-			- [Concatenating array using concat](#concatenating-array-using-concat)
-			- [Getting array length](#getting-array-length)
-			- [Getting index an element in arr array](#getting-index-an-element-in-arr-array)
-			- [Getting last index of an element in array](#getting-last-index-of-an-element-in-array)
-			- [Checking array](#checking-array)
-			- [Converting array to string](#converting-array-to-string)
-			- [Joining array elements](#joining-array-elements)
-			- [Slice array elements](#slice-array-elements)
-			- [Splice method in array](#splice-method-in-array)
-			- [Adding item to an array using push](#adding-item-to-an-array-using-push)
-			- [Removing the end element using pop](#removing-the-end-element-using-pop)
-			- [Removing an element from the beginning](#removing-an-element-from-the-beginning)
-			- [Add an element from the beginning](#add-an-element-from-the-beginning)
-			- [Reversing array order](#reversing-array-order)
-			- [Sorting elements in array](#sorting-elements-in-array)
-		- [Array of arrays](#array-of-arrays)
-	- [💻 Exercise](#-exercise)
-		- [Exercise: Level 1](#exercise-level-1)
-		- [Exercise: Level 2](#exercise-level-2)
-		- [Exercise: Level 3](#exercise-level-3)
+  - [Arrays](#arrays)
+    - [How to create an empty array](#how-to-create-an-empty-array)
+    - [How to create an array with values](#how-to-create-an-array-with-values)
+    - [Creating an array using split](#creating-an-array-using-split)
+    - [Accessing array items using index](#accessing-array-items-using-index)
+    - [Modifying array element](#modifying-array-element)
+    - [Methods to manipulate array](#methods-to-manipulate-array)
+      - [Array Constructor](#array-constructor)
+      - [Creating static values with fill](#creating-static-values-with-fill)
+      - [Concatenating array using concat](#concatenating-array-using-concat)
+      - [Getting array length](#getting-array-length)
+      - [Getting index an element in arr array](#getting-index-an-element-in-arr-array)
+      - [Getting last index of an element in array](#getting-last-index-of-an-element-in-array)
+      - [Checking array](#checking-array)
+      - [Converting array to string](#converting-array-to-string)
+      - [Joining array elements](#joining-array-elements)
+      - [Slice array elements](#slice-array-elements)
+      - [Splice method in array](#splice-method-in-array)
+      - [Adding item to an array using push](#adding-item-to-an-array-using-push)
+      - [Removing the end element using pop](#removing-the-end-element-using-pop)
+      - [Removing an element from the beginning](#removing-an-element-from-the-beginning)
+      - [Add an element from the beginning](#add-an-element-from-the-beginning)
+      - [Reversing array order](#reversing-array-order)
+      - [Sorting elements in array](#sorting-elements-in-array)
+    - [Array of arrays](#array-of-arrays)
+  - [💻 Exercise](#-exercise)
+    - [Exercise: Level 1](#exercise-level-1)
+    - [Exercise: Level 2](#exercise-level-2)
+    - [Exercise: Level 3](#exercise-level-3)
 
 # 📔 Day 5
 
@@ -383,7 +384,7 @@ console.log(numbers.indexOf(6)) // -> -1
 Check an element if it exist in an array.
 
 - Check items in a list
-  
+
 ```js
 // let us check if a banana exist in the array
 
@@ -712,63 +713,62 @@ const webTechs = [
 ### Exercise: Level 2
 
 1. Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
-1. First remove all the punctuations and change the string to array and count the number of words in the array
+2. First remove all the punctuations and change the string to array and count the number of words in the array
 
-    ```js
-    let text =
-    'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
-    console.log(words)
-    console.log(words.length)
-    ```
+   ```js
+   let text =
+   'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+   console.log(words)
+   console.log(words.length)
+   ```
 
-    ```sh
-    ["I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", "JS", "React", "Python"]
-  
-    13
-    ```
+   ```sh
+   ["I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", "JS", "React", "Python"]
 
-1. In the following shopping cart add, remove, edit items
+   13
+   ```
+3. In the following shopping cart add, remove, edit items
 
-    ```js
-    const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
-    ```
+   ```js
+   const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+   ```
 
    - add 'Meat' in the beginning of your shopping cart if it has not been already added
    - add Sugar at the end of you shopping cart if it has not been already added
    - remove 'Honey' if you are allergic to honey
    - modify Tea to 'Green Tea'
-1. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
-1. In the webTechs array check if Sass exists in the array  and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
-1. Concatenate the following two variables and store it in a fullStack variable.
+4. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+5. In the webTechs array check if Sass exists in the array  and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
+6. Concatenate the following two variables and store it in a fullStack variable.
 
-    ```js
-    const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
-    const backEnd = ['Node','Express', 'MongoDB']
-  
-    console.log(fullStack)
-    ```
+   ```js
+   const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+   const backEnd = ['Node','Express', 'MongoDB']
 
-    ```sh
-    ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
-    ```
+   console.log(fullStack)
+   ```
+
+   ```sh
+   ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+   ```
 
 ### Exercise: Level 3
 
 1. The following is an array of 10 students ages:
 
-    ```js
-    const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
-    ```
+   ```js
+   const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+   ```
 
-    - Sort the array and find the min and max age
-    - Find the median age(one middle item or two middle items divided by two)
-    - Find the average age(all items divided by number of items)
-    - Find the range of the ages(max minus min)
-    - Compare the value of (min - average) and (max - average), use _abs()_ method
-1.Slice the first ten countries from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js)
-1. Find the middle country(ies) in the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js)
-2. Divide the countries array into two equal arrays if it is even.  If countries array is not even , one more country for the first half.
-  
+   - Sort the array and find the min and max age
+   - Find the median age(one middle item or two middle items divided by two)
+   - Find the average age(all items divided by number of items)
+   - Find the range of the ages(max minus min)
+   - Compare the value of (min - average) and (max - average), use _abs()_ method
+     1.Slice the first ten countries from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js)
+2. Find the middle country(ies) in the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js)
+3. Divide the countries array into two equal arrays if it is even.  If countries array is not even , one more country for the first half.
+
 🎉 CONGRATULATIONS ! 🎉
 
-[<< Day 4](../04_Day_Conditionals/04_day_Conditionals.md) | [Day 6 >>](../06_Day_Loops/06_day_loops.md)
+[&lt;&lt; Day 4](../04_Day_Conditionals/04_day_Conditionals.md) | [Day 6 &gt;&gt;](../06_Day_Loops/06_day_loops.md)
